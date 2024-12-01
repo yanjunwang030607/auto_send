@@ -3,10 +3,10 @@ name: Scheduled Email
 
 on:
   schedule:
-    - cron: '24 17 * * *'  # 每天8点
-    - cron: '14 13 * * *'  # 每天13:14
-    - cron: '30 17 * * *'  # 每天17:30
-    - cron: '59 23 * * *'  # 每天23:59
+    - cron: '27 17 * * *'  # 每天8点
+    - cron: '28 17 * * *'  # 每天13:14
+    - cron: '29 17 * * *'  # 每天17:30
+    - cron: '30 17 * * *'  # 每天23:59
 
 jobs:
   send_email:
@@ -14,16 +14,16 @@ jobs:
     steps:
       - name: Send Morning Email
         run: |
-          curl -X POST https://your-vercel-app.vercel.app/api/send_email -d '{"subject": "爱在黎明破晓中", "body": "亲爱的子艺大宝贝早上好，今天又是特别爱你的一天，我们要保持美丽开心来面会今天吧！！注意防寒保暖，尽量记得吃早餐！"}'
+          curl -X POST https://autosend-eool17dc7-wangyanjuns-projects.vercel.app/api/send_email -d '{"subject": "爱在黎明破晓中", "body": "亲爱的子艺大宝贝早上好，今天又是特别爱你的一天，我们要保持美丽开心来面会今天吧！！注意防寒保暖，尽量记得吃早餐！"}'
       
       - name: Send Afternoon Email
         run: |
-          curl -X POST https://your-vercel-app.vercel.app/api/send_email -d '{"subject": "爱在1314", "body": "现在是13.14，我爱你。"}'
+          curl -X POST https://autosend-eool17dc7-wangyanjuns-projects.vercel.app/api/send_email -d '{"subject": "爱在1314", "body": "现在是13.14，我爱你。"}'
       
       - name: Send Evening Email
         run: |
-          curl -X POST https://your-vercel-app.vercel.app/api/send_email -d '{"subject": "爱在日落黄昏时", "body": "马上吃完饭了，记得吃晚饭哟"}'
+          curl -X POST https://autosend-eool17dc7-wangyanjuns-projects.vercel.app/api/send_email -d '{"subject": "爱在日落黄昏时", "body": "马上吃完饭了，记得吃晚饭哟"}'
       
       - name: Send Night Email
         run: |
-          curl -X POST https://your-vercel-app.vercel.app/api/send_email -d '{"subject": "爱在午夜降临前", "body": "记得乖乖睡觉"}'
+          curl -X POST https://autosend-eool17dc7-wangyanjuns-projects.vercel.app/api/send_email -d '{"subject": "爱在午夜降临前", "body": "记得乖乖睡觉"}'
