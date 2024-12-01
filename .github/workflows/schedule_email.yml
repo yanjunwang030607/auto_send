@@ -3,7 +3,7 @@ name: Scheduled Email
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # 每天8点
+    - cron: '24 17 * * *'  # 每天8点
     - cron: '14 13 * * *'  # 每天13:14
     - cron: '30 17 * * *'  # 每天17:30
     - cron: '59 23 * * *'  # 每天23:59
